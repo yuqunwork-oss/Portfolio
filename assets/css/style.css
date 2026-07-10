@@ -777,12 +777,6 @@ footer {
   transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 
-.cert-badges li::before {
-  content: "🏅";
-  font-size: 0.95em;
-  filter: grayscale(15%);
-}
-
 .cert-badges li:hover {
   transform: translateY(-3px);
   border-color: rgba(240, 198, 103, 0.65);
