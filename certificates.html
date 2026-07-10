@@ -17,8 +17,25 @@
       </ul>
     </nav>
 
+    <div class="project-layout">
+      <!-- 左側證照導覽 -->
+      <aside class="project-nav">
+        <div
+          class="project-nav-tree"
+          role="navigation"
+          aria-label="證照與榮譽導覽"
+        >
+          <ul class="nav-group-items nav-flat">
+            <li><a href="#cert-license">證照</a></li>
+            <li><a href="#cert-training">專業研習</a></li>
+            <li><a href="#cert-honor">校園榮譽</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <div class="project-content">
     <!-- 證照 -->
-    <section class="cert-section">
+    <section class="cert-section" id="cert-license">
       <h2 class="glow-white">證照</h2>
 
       <h3 class="cert-group-title">程式與資訊技術</h3>
@@ -73,7 +90,7 @@
     </section>
 
     <!-- 專業研習 -->
-    <section class="cert-section">
+    <section class="cert-section" id="cert-training">
       <h2 class="glow-white">專業研習</h2>
       <div class="cert-card cert-card-grid">
         <div class="cert-item">
@@ -167,7 +184,7 @@
     </section>
 
     <!-- 校園榮譽 -->
-    <section class="cert-section">
+    <section class="cert-section" id="cert-honor">
       <h2 class="glow-white">校園榮譽</h2>
       <div class="cert-card">
         <div class="cert-item">
@@ -234,6 +251,8 @@
         </div>
       </div>
     </section>
+      </div>
+    </div>
 
     <!-- 頁尾 -->
     <footer>
@@ -249,5 +268,6 @@
     </div>
 
     <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/projects-nav.js"></script>
   </body>
 </html>

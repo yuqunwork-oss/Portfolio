@@ -142,6 +142,10 @@ h3 {
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
+.cert-section {
+  scroll-margin-top: calc(var(--nav-h) + 20px);
+}
+
 /* =========================
    Project Card hover
 ========================= */
@@ -263,6 +267,11 @@ h3 {
 }
 
 .nav-group-items li { margin: 0; }
+
+.nav-group-items.nav-flat {
+  padding-left: 0;
+  margin-top: 0;
+}
 
 .project-nav a {
   display: block;
