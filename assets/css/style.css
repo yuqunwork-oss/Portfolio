@@ -778,8 +778,9 @@ footer {
   margin: 0 auto;
 }
 
-.cert-badges-row2 {
-  margin-top: 14px;
+.cert-badges-column {
+  flex-direction: column;
+  align-items: center;
 }
 
 .cert-badges li {
