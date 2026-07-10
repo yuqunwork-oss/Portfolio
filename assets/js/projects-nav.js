@@ -12,31 +12,6 @@
     });
   });
 
-  // ---- 依標題搜尋 ----
-  const searchInput = nav.querySelector("#projectSearch");
-  if (searchInput) {
-    searchInput.addEventListener("input", () => {
-      const query = searchInput.value.trim().toLowerCase();
-      nav.querySelectorAll(".nav-group").forEach((group) => {
-        const toggle = group.querySelector(".nav-group-toggle");
-        const list = group.querySelector(".nav-group-items");
-        let anyVisible = false;
-
-        list.querySelectorAll("li").forEach((li) => {
-          const match = !query || li.textContent.toLowerCase().includes(query);
-          li.style.display = match ? "" : "none";
-          if (match) anyVisible = true;
-        });
-
-        group.style.display = anyVisible ? "" : "none";
-        if (query) {
-          toggle.setAttribute("aria-expanded", "true");
-          list.hidden = false;
-        }
-      });
-    });
-  }
-
   // ---- 捲動時自動高亮目前所在區塊 ----
   const navLinks = nav.querySelectorAll("a[href^='#']");
   if (!navLinks.length) return;
