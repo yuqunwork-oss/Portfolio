@@ -744,26 +744,26 @@ footer {
 }
 
 /* =========================
-   Gold Glow Heading（證照標題）
+   White Glow Heading（證照／比賽標題）
 ========================= */
-.glow-gold {
-  color: #f0c667;
-  border-bottom-color: #d9a441;
-  text-shadow: 0 0 10px rgba(240, 198, 103, 0.45), 0 0 22px rgba(217, 164, 65, 0.22);
-  animation: glow-gold-pulse 3.5s ease-in-out infinite;
+.glow-white {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.55), 0 0 22px rgba(255, 255, 255, 0.28);
+  animation: glow-white-pulse 3.5s ease-in-out infinite;
 }
 
-@keyframes glow-gold-pulse {
+@keyframes glow-white-pulse {
   0%, 100% {
-    text-shadow: 0 0 10px rgba(240, 198, 103, 0.4), 0 0 22px rgba(217, 164, 65, 0.2);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 22px rgba(255, 255, 255, 0.25);
   }
   50% {
-    text-shadow: 0 0 16px rgba(240, 198, 103, 0.65), 0 0 32px rgba(217, 164, 65, 0.35);
+    text-shadow: 0 0 18px rgba(255, 255, 255, 0.8), 0 0 34px rgba(255, 255, 255, 0.4);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .glow-gold { animation: none; }
+  .glow-white { animation: none; }
 }
 
 /* =========================
