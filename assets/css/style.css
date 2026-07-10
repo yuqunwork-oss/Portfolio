@@ -748,6 +748,19 @@ footer {
 }
 
 /* =========================
+   Cert Group Title（證照分類標題）
+========================= */
+.cert-group-title {
+  color: var(--primary);
+  font-size: 1.15rem;
+  margin: 32px 0 14px;
+}
+
+.cert-group-title:first-of-type {
+  margin-top: 20px;
+}
+
+/* =========================
    Cert Badges（證照徽章列表）
 ========================= */
 .cert-badges {
