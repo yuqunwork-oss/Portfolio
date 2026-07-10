@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>作品網站｜吳育群</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .g-name {
+      font-weight: 800;
+      font-size: 60px;   /* 放大 YU-QUN WU */
+      line-height: 1.1;
+    }
+
+    .g-name-link {
+      text-decoration: none;
+      color: inherit;
+      display: inline-block;
+    }
+
+    .g1 { color: #4285F4; } /* Blue */
+    .g2 { color: #EA4335; } /* Red */
+    .g3 { color: #FBBC05; } /* Yellow */
+    .g4 { color: #34A853; } /* Green */
+
+    .g-name span { text-shadow: 0 6px 16px rgba(0,0,0,0.35); }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">主頁</a></li>
+      <li><a href="projects.html">作品集</a></li>
+      <li><a href="certificates.html">證照與比賽</a></li>
+      <li><a href="contact.html">聯絡我</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-text">
+      <p class="hero-typing">
+        <span id="typing"></span>
+      </p>
+    </div>
+  </header>
+
+  <script>
+    const fullText = "Hello,  I’m YU-QUN WU Welcome to my portfolio ";
+    const targetName = "YU-QUN WU";
+    const coloredName =
+      '<a href="contact.html" class="g-name g-name-link" aria-label="Contact me">' +
+        '<span class="g1">Y</span>' +
+        '<span class="g2">U</span>' +
+        '<span class="g3">-</span>' +
+        '<span class="g1">Q</span>' +
+        '<span class="g4">U</span>' +
+        '<span class="g2">N</span>' +
+        '<span class="space"></span>' +
+        '<span class="g1">W</span>' +
+        '<span class="g2">U</span>' +
+      '</a>';
+
+    const speed = 50; // 打字速度 (越小越快)
+    const typingEl = document.getElementById("typing");
+
+    let i = 0;
+    let buffer = "";
+
+    function renderWithColoredName(textSoFar) {
+      typingEl.innerHTML = textSoFar.replaceAll(targetName, coloredName);
+    }
+
+    function typeWriter() {
+      if (i < fullText.length) {
+        buffer += fullText.charAt(i);
+        renderWithColoredName(buffer);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    typeWriter();
+  </script>
+</body>
+</html>

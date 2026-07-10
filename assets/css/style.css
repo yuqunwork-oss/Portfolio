@@ -1,0 +1,741 @@
+/* =========================
+   Theme
+========================= */
+:root {
+  --bg-main: #0f172a;
+  --bg-nav: #1e293b;
+  --bg-card: #111827;
+  --primary: #38bdf8;
+
+  --text-main: #f8fafc;
+  --text-sub: #cbd5e1;
+  --border-light: #334155;
+
+  --nav-h: 72px;
+  --radius: 16px;
+}
+
+/* =========================
+   Base
+========================= */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  padding-top: var(--nav-h);
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* =========================
+   Nav（透明浮在背景上：更像範例）
+========================= */
+nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  /* 半透明 + 模糊（像範例那種浮在圖上） */
+  background: rgba(15, 23, 42, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+  padding: 12px 0;
+}
+
+nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 18px;
+  margin: 0 auto;
+  padding: 0 60px 0 0;
+  max-width: 1100px;
+}
+
+nav a{
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 18px;
+
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+
+  transition: background-color .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+nav a:hover{
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.18);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   Layout
+========================= */
+section {
+  padding: 90px 20px 90px;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  color: var(--text-sub);
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 20px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+ul li { margin: 6px 0; }
+
+/* =========================
+   Headings
+========================= */
+h1 {
+  font-size: 52px;
+  color: var(--primary);
+  margin: 0 0 20px;
+}
+
+h2 {
+  font-size: 32px;
+  color: var(--text-main);
+  margin: 0 auto 40px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--primary);
+  width: fit-content;
+  text-align: center;
+}
+
+h3 {
+  margin: 18px 0 10px;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+/* =========================
+   Card (通用卡片外框)
+   - 你的 HTML 用到 .cert-section / .project-card / .card
+========================= */
+.card,
+.cert-section,
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 36px 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   Project Card hover
+========================= */
+.project-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 42px rgba(0,0,0,0.35);
+}
+
+.project-desc {
+  color: var(--text-sub);
+  line-height: 1.7;
+  margin-top: 12px;
+  margin-bottom: 22px;
+}
+
+.project-link a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.project-link a:hover { text-decoration: underline; }
+
+/* =========================
+   Project Media (影片)
+========================= */
+.project-media {
+  max-width: 720px;
+  margin: 36px auto 0;
+  padding: 18px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+}
+
+.demo-video {
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 16 / 9;
+  display: block;
+  margin: 16px auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+}
+
+.media-screenshot {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  display: block;
+  margin: 16px auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+}
+
+.media-note {
+  font-size: 0.95rem;
+  color: var(--text-sub);
+  line-height: 1.6;
+  max-width: 640px;
+  margin: 10px auto 0;
+}
+
+/* =========================
+   Project Layout（作品集頁：導覽 + 內容）
+   - 導覽本身不參與版面排擠：專案卡片永遠依全頁寬度置中，
+     寬螢幕時導覽改用 fixed 貼齊畫面最左側，不會把內容往右推。
+========================= */
+.project-content {
+  width: 100%;
+}
+
+.project-nav {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  text-align: left;
+}
+
+.project-nav-search input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-light);
+  background: rgba(255,255,255,0.04);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.project-nav-search input::placeholder { color: var(--text-sub); }
+
+.project-nav-search input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.nav-group + .nav-group { margin-top: 14px; }
+
+.nav-group-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 6px 4px;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.nav-chevron {
+  display: inline-block;
+  color: var(--text-sub);
+  transition: transform .2s ease;
+}
+
+.nav-group-toggle[aria-expanded="false"] .nav-chevron {
+  transform: rotate(-90deg);
+}
+
+.nav-group-items {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0 0 0 22px;
+}
+
+.nav-group-items li { margin: 0; }
+
+.project-nav a {
+  display: block;
+  padding: 7px 10px;
+  margin: 2px 0;
+  border-radius: 8px;
+  color: var(--text-sub);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.project-nav a:hover {
+  background: rgba(255,255,255,0.06);
+  color: var(--text-main);
+}
+
+.project-nav a.active {
+  background: rgba(56, 189, 248, 0.16);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* 寬螢幕：導覽固定貼左，內容不受影響、維持自身置中 */
+@media (min-width: 1600px) {
+  .project-nav {
+    position: fixed;
+    left: 24px;
+    top: calc(var(--nav-h) + 24px);
+    width: 230px;
+    max-width: none;
+    max-height: calc(100vh - var(--nav-h) - 48px);
+    overflow-y: auto;
+    margin: 0;
+  }
+}
+
+/* =========================
+   Section Description（大區塊標題下的整體說明）
+========================= */
+.section-desc {
+  margin-bottom: 8px;
+}
+
+/* =========================
+   Subproject（大區塊內的子專案分隔）
+========================= */
+.subproject {
+  margin-top: 44px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border-light);
+  text-align: center;
+}
+
+.subproject:first-of-type {
+  margin-top: 28px;
+  padding-top: 0;
+  border-top: none;
+}
+
+.subproject-title {
+  font-size: 1.35rem;
+  color: var(--primary);
+  margin: 0 0 6px;
+}
+
+.subproject h4 {
+  margin: 20px 0 8px;
+  font-size: 1rem;
+  color: var(--text-sub);
+  font-weight: 700;
+}
+
+/* =========================
+   Video / Image Grid（單一子專案內多支影片、多張圖片並排）
+========================= */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 16px;
+  align-items: start;
+}
+
+.video-grid .demo-video {
+  margin: 0 auto;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  max-width: 900px;
+  margin: 20px auto 0;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.3);
+}
+
+.gallery-doc-link {
+  display: block;
+  border-radius: 12px;
+  outline-offset: 4px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.gallery-doc-link:hover,
+.gallery-doc-link:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(56, 189, 248, 0.25);
+}
+
+.gallery-doc-link img { cursor: pointer; }
+
+.resource-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 22px;
+  margin: 12px auto 0;
+  font-size: 0.95rem;
+}
+
+.resource-list a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.resource-list a:hover { text-decoration: underline; }
+
+/* =========================
+   Certificate Images (證明/照片)
+========================= */
+.award-photo {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  transition: transform 0.25s ease;
+}
+
+.award-photo:hover { transform: scale(1.03); }
+
+/* =========================
+   幹部證明：左右排版
+   - 你的 HTML 用到 .cert-card / .cert-item
+========================= */
+.cert-card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 70px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.cert-item {
+  width: min(520px, 100%);
+  text-align: center;
+  transition: transform 0.25s ease;
+}
+
+.cert-item:hover { transform: translateY(-6px); }
+
+.cert-item p {
+  margin: 10px auto 0;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+/* =========================
+   Tech Tags
+========================= */
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 24px auto 0;
+}
+
+.tech-list li {
+  background: #1e293b;
+  color: var(--text-main);
+  border: 1px solid var(--border-light);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   Hero（Hikoo 風格：冷色霧面 + 左下文字）
+========================= */
+.hero{
+  position: relative;
+  z-index: 0;
+
+  height: calc(100vh - var(--nav-h));
+  margin-top: calc(-1 * var(--nav-h)); /* 抵銷 body padding-top */
+
+  display: flex;
+  align-items: flex-end;       /*  靠下 */
+  justify-content: flex-start; /*  靠左 */
+  text-align: left;
+
+  padding: 0 72px 86px;        /*  左下留白 */
+  overflow: hidden;
+}
+
+/* 背景層：冷綠霧面遮罩 + 圖片 */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 16, 28, 0.72) 0%,
+      rgba(10, 24, 40, 0.46) 45%,
+      rgba(0, 0, 0, 0.18) 100%
+    ),
+    url("../images/hero.jpg") center 20% / cover no-repeat;
+
+  filter: saturate(108%) contrast(105%) brightness(90%);
+  transform: scale(1.02);
+  z-index:-1;
+}
+
+/* 文字區塊 */
+.hero-text{
+  max-width: 820px;
+}
+
+.hero-text h1{
+  font-size: clamp(34px, 5vw, 64px);
+  color: #fff;
+  margin: 0 0 14px;
+  line-height: 1.12;
+  letter-spacing: 0.5px;
+  text-shadow: 0 10px 26px rgba(0,0,0,0.45);
+}
+
+.hero-text p{
+  font-size: clamp(14px, 2vw, 18px);
+  color: rgba(255,255,255,0.82);
+  margin: 0;
+  max-width: 760px; 
+  line-height: 1.7;
+  text-shadow: 0 8px 22px rgba(0,0,0,0.45);
+}
+
+/* （可選）範例那種膠囊按鈕 */
+.hero-actions{
+  display: flex;
+  gap: 14px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+.pill{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.88);
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 800;
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.25);
+  transition: transform .2s ease, background .2s ease;
+}
+
+.pill:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.96);
+}
+
+.pill-wide{
+  min-width: 280px;
+}
+
+/* 手機版 */
+@media (max-width: 768px){
+  nav ul{ padding-right: 18px; gap: 10px; }
+  nav a{ font-size: 16px; padding: 8px 12px; }
+
+  .hero{
+    padding: 0 18px 42px;
+  }
+
+  .pill-wide{ min-width: 220px; }
+}
+.g-name-link{
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.g-name-link:hover{
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.g1 { color: #4285F4; } /* Blue */
+.g2 { color: #EA4335; } /* Red */
+.g3 { color: #FBBC05; } /* Yellow */
+.g4 { color: #34A853; } /* Green */
+.space { display: inline-block; width: 0.35em; }
+
+
+/* =========================
+  頁首標題區：作品集/證照等頁面
+========================= */
+
+.page-header{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 90px 20px 40px;   /* 上方避開 nav，下面留空間 */
+  text-align: center;
+}
+
+.page-header h1{
+  margin: 0 auto 16px;
+  width: fit-content;
+}
+
+.page-header p{
+  margin: 0 auto;
+}
+/* =========================
+   Footer
+========================= */
+footer {
+  padding: 22px 0;
+  font-size: 0.9rem;
+  color: var(--text-sub);
+  border-top: 1px solid var(--border-light);
+  margin-top: 60px;
+  text-align: center;
+}
+
+/* =========================
+   Lightbox（點縮圖彈窗放大圖片）
+========================= */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: rgba(8, 12, 20, 0.92);
+  backdrop-filter: blur(4px);
+  cursor: zoom-out;
+  animation: lightbox-fade-in .18s ease;
+}
+
+.lightbox[hidden] { display: none; }
+
+.lightbox-content {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@keyframes lightbox-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lightbox-img,
+.lightbox-video {
+  display: block;
+  max-width: calc(100vw - 64px);
+  max-height: calc(100vh - 64px);
+  border-radius: 14px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.55);
+  cursor: default;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color .2s ease, transform .2s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.06);
+}
+
+.lightbox-frame {
+  width: min(calc(100vw - 64px), 860px);
+  height: calc(100vh - 64px);
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.55);
+  background: #fff;
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .lightbox { padding: 16px; }
+  .lightbox-img,
+  .lightbox-video {
+    max-width: calc(100vw - 32px);
+    max-height: calc(100vh - 32px);
+  }
+  .lightbox-frame {
+    width: calc(100vw - 32px);
+    height: calc(100vh - 32px);
+  }
+  .lightbox-close {
+    top: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 1024px) {
+  h1 { font-size: 40px; }
+  h2 { font-size: 26px; }
+  section { padding: 70px 16px 80px; }
+  .card, .cert-section, .project-card { padding: 28px 18px; }
+  .cert-card { gap: 36px; }
+}
+
