@@ -544,6 +544,20 @@ h3 {
   text-shadow: 0 8px 22px rgba(0,0,0,0.45);
 }
 
+.hero-role{
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #7dd3fc;
+  font-weight: 700;
+  font-size: clamp(13px, 1.8vw, 16px);
+  letter-spacing: 0.3px;
+  text-shadow: none;
+}
+
 /* （可選）範例那種膠囊按鈕 */
 .hero-actions{
   display: flex;
