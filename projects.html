@@ -1,343 +1,500 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8">
-  <title>作品集｜吳育群</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>作品集｜吳育群</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- 導覽列 -->
+    <nav>
+      <ul>
+        <li><a href="index.html">主頁</a></li>
+        <li><a href="projects.html">作品集</a></li>
+        <li><a href="certificates.html">證照與比賽</a></li>
+        <li><a href="contact.html">聯絡我</a></li>
+      </ul>
+    </nav>
 
-  <!-- 導覽列 -->
-  <nav>
-    <ul>
-      <li><a href="index.html">主頁</a></li>
-      <li><a href="projects.html">作品集</a></li>
-      <li><a href="certificates.html">證照與比賽</a></li>
-      <li><a href="contact.html">聯絡我</a></li>
-    </ul>
-  </nav>
-
-  <!-- 頁面標題 -->
-  <header class="page-header">
-    <h1>作品集</h1>
-  </header>
-
-  <div class="project-layout">
-    <!-- 左側專案導覽 -->
-    <aside class="project-nav">
-      <div class="project-nav-search">
-        <input type="search" id="projectSearch" placeholder="依標題尋找" aria-label="依標題尋找作品">
-      </div>
-      <div class="project-nav-tree" role="navigation" aria-label="作品分類導覽">
-        <div class="nav-group">
-          <button type="button" class="nav-group-toggle" aria-expanded="true">
-            <span class="nav-chevron">▾</span> 視覺辨識
-          </button>
-          <ul class="nav-group-items">
-            <li><a href="#vision-computex">雙臂機器人視覺抓取</a></li>
-            <li><a href="#vision-jbd">紙箱瑕疵辨識</a></li>
-            <li><a href="#vision-safehome">居家照護警報</a></li>
-            <li><a href="#vision-mask">口罩偵測</a></li>
-          </ul>
+    <div class="project-layout">
+      <!-- 左側專案導覽 -->
+      <aside class="project-nav">
+        <div class="project-nav-search">
+          <input
+            type="search"
+            id="projectSearch"
+            placeholder="依標題尋找"
+            aria-label="依標題尋找作品"
+          />
         </div>
-        <div class="nav-group">
-          <button type="button" class="nav-group-toggle" aria-expanded="true">
-            <span class="nav-chevron">▾</span> 系統整合
-          </button>
-          <ul class="nav-group-items">
-            <li><a href="#integration-ticketing">演唱會售票系統</a></li>
-            <li><a href="#integration-ntpc">招生報名系統</a></li>
-            <li><a href="#integration-line">AI 官方 LINE</a></li>
-          </ul>
+        <div
+          class="project-nav-tree"
+          role="navigation"
+          aria-label="作品分類導覽"
+        >
+          <div class="nav-group">
+            <button type="button" class="nav-group-toggle" aria-expanded="true">
+              <span class="nav-chevron">▾</span> 視覺辨識
+            </button>
+            <ul class="nav-group-items">
+              <li><a href="#vision-computex">雙臂機器人視覺抓取</a></li>
+              <li><a href="#vision-jbd">紙箱瑕疵辨識</a></li>
+              <li><a href="#vision-safehome">居家照護警報</a></li>
+              <li><a href="#vision-mask">口罩偵測</a></li>
+            </ul>
+          </div>
+          <div class="nav-group">
+            <button type="button" class="nav-group-toggle" aria-expanded="true">
+              <span class="nav-chevron">▾</span> 系統整合
+            </button>
+            <ul class="nav-group-items">
+              <li><a href="#integration-ticketing">演唱會售票系統</a></li>
+              <li><a href="#integration-ntpc">招生報名系統</a></li>
+              <li><a href="#integration-line">AI 官方 LINE</a></li>
+            </ul>
+          </div>
+          <div class="nav-group">
+            <button type="button" class="nav-group-toggle" aria-expanded="true">
+              <span class="nav-chevron">▾</span> 程式練功區
+            </button>
+            <ul class="nav-group-items">
+              <li><a href="#practice-paint">小畫家</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="nav-group">
-          <button type="button" class="nav-group-toggle" aria-expanded="true">
-            <span class="nav-chevron">▾</span> 程式練功區
-          </button>
-          <ul class="nav-group-items">
-            <li><a href="#practice-paint">小畫家</a></li>
-          </ul>
-        </div>
-      </div>
-    </aside>
+      </aside>
 
-    <div class="project-content">
-
-      <!-- 區塊一：視覺辨識 -->
-      <section class="project-card" id="vision">
-        <h2>視覺辨識</h2>
-        <p class="section-desc">
-          彙整多個以電腦視覺／深度學習模型進行影像辨識的專案，應用場景涵蓋機器人視覺抓取、工業瑕疵檢測、物件偵測，以及居家安全監控。
-        </p>
-
-        <!-- 子專案：雙臂機器人視覺抓取系統 -->
-        <div class="subproject" id="vision-computex">
-          <h3 class="subproject-title">雙臂智慧機器人視覺抓取系統｜2026 COMPUTEX</h3>
-          <p class="media-note">
-            2026 COMPUTEX 展示專案，整合 AI 視覺辨識與雙臂機器人協作：透過 ZED 立體攝影機以 YOLO 模型偵測目標物（如可樂罐），計算其 3D 座標並轉換至機械手臂基座座標系，讓機器人能依現場物件位置即時完成抓取動作，取代傳統機械手臂僅能依固定座標作業的限制。
-            我負責軟體系統架構設計、Jetson Thor 環境整合、後端 API 串接、Franka FR3 控制流程實作、DG-5F 靈巧手 API 與手勢控制、視覺座標資料串接，以及實機測試與問題排除。
+      <div class="project-content">
+        <!-- 區塊一：視覺辨識 -->
+        <section class="project-card" id="vision">
+          <h2>視覺辨識</h2>
+          <p class="section-desc">
+            彙整多個以電腦視覺／深度學習模型進行影像辨識的專案，應用場景涵蓋機器人視覺抓取、工業瑕疵檢測、物件偵測，以及居家安全監控。
           </p>
-          <div class="project-media">
-            <div class="video-grid">
-              <div>
-                <video controls muted playsinline preload="metadata" poster="assets/images/posters/computex-arm-showcase.jpg" class="demo-video">
-                  <source src="assets/videos/computex-arm-showcase.mp4" type="video/mp4">
-                  您的瀏覽器不支援影片播放。
-                </video>
-                <p class="media-note">展場實機展示</p>
-              </div>
-              <div>
-                <video controls muted playsinline preload="metadata" poster="assets/images/posters/computex-coke-detection.jpg" class="demo-video">
-                  <source src="assets/videos/computex-coke-detection.mp4" type="video/mp4">
-                  您的瀏覽器不支援影片播放。
-                </video>
-                <p class="media-note">ZED + YOLO 可樂罐 3D 座標辨識</p>
-              </div>
-            </div>
-          </div>
-          <h4>使用技術</h4>
-          <ul class="tech-list">
-            <li>NVIDIA Jetson Thor</li>
-            <li>Franka Research 3 雙臂機械手臂</li>
-            <li>TESOLLO DG-5F 五指靈巧手</li>
-            <li>ZED X 立體深度攝影機</li>
-            <li>YOLO 物件偵測</li>
-            <li>ROS2 / MoveIt2</li>
-            <li>DexGraspNet 2.0</li>
-          </ul>
-          <h4>相關資源</h4>
-          <div class="resource-list">
-            <a href="assets/docs/computex-dual-arm-vision-system.pptx" target="_blank" rel="noopener">📑 專案簡報下載</a>
-            <a href="assets/videos/computex-news-ctitv.mp4" target="_blank" rel="noopener" data-lightbox="assets/videos/computex-news-ctitv.mp4">📰 中天新聞報導</a>
-            <a href="assets/videos/computex-news-cts.mp4" target="_blank" rel="noopener" data-lightbox="assets/videos/computex-news-cts.mp4">📰 華視新聞報導</a>
-          </div>
-        </div>
 
-        <!-- 子專案：紙箱瑕疵辨識 -->
-        <div class="subproject" id="vision-jbd">
-          <h3 class="subproject-title">紙箱瑕疵辨識系統</h3>
-          <p class="media-note">
-            結合機械手臂自動拍照與 AI 瑕疵偵測模型，即時判別紙箱表面的髒污（dirt）、破損（damage）與凹凸點（dot），並提供毛邊、瑕疵面積門檻可調式介面，串接產線 PLC 訊號自動觸發檢測。
-          </p>
-          <div class="project-media">
-            <div class="video-grid">
-              <div>
-                <video controls muted playsinline preload="metadata" poster="assets/images/posters/jbd-capture-process-1.jpg" class="demo-video">
-                  <source src="assets/videos/jbd-capture-process-1.mp4" type="video/mp4">
-                  您的瀏覽器不支援影片播放。
-                </video>
-                <p class="media-note">機械手臂拍照流程</p>
-              </div>
-              <div>
-                <video controls muted playsinline preload="metadata" poster="assets/images/posters/jbd-demo.jpg" class="demo-video">
-                  <source src="assets/videos/jbd-demo.mp4" type="video/mp4">
-                  您的瀏覽器不支援影片播放。
-                </video>
-                <p class="media-note">即時辨識監控介面介紹</p>
-              </div>
-            </div>
-          </div>
-          <h4>辨識結果對比</h4>
-          <div class="image-gallery">
-            <a href="assets/images/jbd-defect-before.jpg" target="_blank" rel="noopener" class="gallery-doc-link" data-lightbox="assets/images/jbd-defect-before.jpg">
-              <img src="assets/images/jbd-defect-before.jpg" alt="紙箱瑕疵辨識前原始影像" loading="lazy">
-            </a>
-            <a href="assets/images/jbd-defect-after-1.jpg" target="_blank" rel="noopener" class="gallery-doc-link" data-lightbox="assets/images/jbd-defect-after-1.jpg">
-              <img src="assets/images/jbd-defect-after-1.jpg" alt="紙箱瑕疵辨識後標註結果一" loading="lazy">
-            </a>
-            <a href="assets/docs/jbd-report-2026-07.pdf" target="_blank" rel="noopener" class="gallery-doc-link" data-lightbox="assets/docs/jbd-report-2026-07.pdf">
-              <img src="assets/images/jbd-report-preview.jpg" alt="2026-07 紙箱瑕疵辨識品檢日報表縮圖，點擊查看完整報表">
-            </a>
-          </div>
-          <h4>使用技術</h4>
-          <ul class="tech-list">
-            <li>機械手臂自動拍照</li>
-            <li>AI 瑕疵偵測（dirt / damage / dot）</li>
-            <li>PLC 產線訊號整合</li>
-            <li>可調式辨識閾值監控介面</li>
-          </ul>
-        </div>
-
-        <!-- 子專案：居家照護與 n8n 警報系統 -->
-        <div class="subproject" id="vision-safehome">
-          <h3 class="subproject-title">AI 智慧居家照護與 n8n 警報系統</h3>
-          <p class="media-note">
-            以攝影機即時偵測居家環境中的人物與危險物件（如剪刀等尖銳物），依距離、持續時間與重疊比例計算危險分數，超過門檻時自動觸發 n8n Webhook 發送警報通知，協助遠端照護者即時掌握居家安全狀況。
-          </p>
-          <div class="project-media">
-            <div class="video-grid">
-              <div>
-                <video controls muted playsinline preload="metadata" poster="assets/images/posters/safehome-demo.jpg" class="demo-video">
-                  <source src="assets/videos/safehome-demo.mp4" type="video/mp4">
-                  您的瀏覽器不支援影片播放。
-                </video>
-                <p class="media-note">即時人物／危險物件偵測與危險分數演算展示</p>
-              </div>
-              <div>
-                <a href="assets/images/safehome-alert-notifications.jpg" target="_blank" rel="noopener" class="gallery-doc-link" data-lightbox="assets/images/safehome-alert-notifications.jpg">
-                  <img src="assets/images/safehome-alert-notifications.jpg" alt="AI 危險警報 Mail 與 LINE 通知截圖" class="media-screenshot">
-                </a>
-                <p class="media-note">偵測到危險後自動發送 Mail／LINE 警報通知</p>
-              </div>
-            </div>
-          </div>
-          <h4>使用技術</h4>
-          <ul class="tech-list">
-            <li>YOLO 人物／物件偵測</li>
-            <li>危險分數演算法</li>
-            <li>n8n Webhook 自動警報</li>
-          </ul>
-          <h4>相關資源</h4>
-          <div class="resource-list">
-            <a href="assets/docs/safehome-report.pdf" target="_blank" rel="noopener">📄 專案報告書下載</a>
-          </div>
-        </div>
-
-        <!-- 子專案：口罩辨識 -->
-        <div class="subproject" id="vision-mask">
-          <h3 class="subproject-title">AI 影像辨識｜口罩偵測</h3>
-          <div class="project-media">
-            <video controls muted playsinline preload="metadata" poster="assets/images/posters/mask_yolo.jpg" class="demo-video">
-              <source src="assets/videos/mask_yolo.mp4" type="video/mp4">
-              您的瀏覽器不支援影片播放。
-            </video>
+          <!-- 子專案：雙臂機器人視覺抓取系統 -->
+          <div class="subproject" id="vision-computex">
+            <h3 class="subproject-title">
+              雙臂智慧機器人視覺抓取系統｜2026 COMPUTEX
+            </h3>
             <p class="media-note">
-              影片口罩辨識（Face Mask / No Mask）
+              2026 COMPUTEX 展示專案，整合 AI 視覺辨識與雙臂機器人協作：透過 ZED
+              立體攝影機以 YOLO 模型偵測目標物（如可樂罐），計算其 3D
+              座標並轉換至機械手臂基座座標系，讓機器人能依現場物件位置即時完成抓取動作，取代傳統機械手臂僅能依固定座標作業的限制。
+              我負責軟體系統架構設計、Jetson Thor 環境整合、後端 API
+              串接、Franka FR3 控制流程實作、DG-5F 靈巧手 API
+              與手勢控制、視覺座標資料串接，以及實機測試與問題排除。
+            </p>
+            <div class="project-media">
+              <div class="video-grid">
+                <div>
+                  <video
+                    controls
+                    muted
+                    playsinline
+                    preload="metadata"
+                    poster="assets/images/posters/computex-arm-showcase.jpg"
+                    class="demo-video"
+                  >
+                    <source
+                      src="assets/videos/computex-arm-showcase.mp4"
+                      type="video/mp4"
+                    />
+                    您的瀏覽器不支援影片播放。
+                  </video>
+                  <p class="media-note">展場實機展示</p>
+                </div>
+                <div>
+                  <video
+                    controls
+                    muted
+                    playsinline
+                    preload="metadata"
+                    poster="assets/images/posters/computex-coke-detection.jpg"
+                    class="demo-video"
+                  >
+                    <source
+                      src="assets/videos/computex-coke-detection.mp4"
+                      type="video/mp4"
+                    />
+                    您的瀏覽器不支援影片播放。
+                  </video>
+                  <p class="media-note">ZED + YOLO 可樂罐 3D 座標辨識</p>
+                </div>
+              </div>
+            </div>
+            <h4>使用技術</h4>
+            <ul class="tech-list">
+              <li>NVIDIA Jetson Thor</li>
+              <li>Franka Research 3 雙臂機械手臂</li>
+              <li>TESOLLO DG-5F 五指靈巧手</li>
+              <li>ZED X 立體深度攝影機</li>
+              <li>YOLO 物件偵測</li>
+              <li>ROS2 / MoveIt2</li>
+              <li>DexGraspNet 2.0</li>
+            </ul>
+            <h4>相關資源</h4>
+            <div class="resource-list">
+              <a
+                href="assets/docs/computex-dual-arm-vision-system.pptx"
+                target="_blank"
+                rel="noopener"
+                >📑 專案簡報下載</a
+              >
+              <a
+                href="assets/videos/computex-news-ctitv.mp4"
+                target="_blank"
+                rel="noopener"
+                data-lightbox="assets/videos/computex-news-ctitv.mp4"
+                >📰 中天新聞報導</a
+              >
+              <a
+                href="assets/videos/computex-news-cts.mp4"
+                target="_blank"
+                rel="noopener"
+                data-lightbox="assets/videos/computex-news-cts.mp4"
+                >📰 華視新聞報導</a
+              >
+            </div>
+          </div>
+
+          <!-- 子專案：紙箱瑕疵辨識 -->
+          <div class="subproject" id="vision-jbd">
+            <h3 class="subproject-title">紙箱瑕疵辨識系統</h3>
+            <p class="media-note">
+              結合機械手臂自動拍照與 AI
+              瑕疵偵測模型，即時判別紙箱表面的髒污（dirt）、破損（damage）與凹凸點（dot），並提供毛邊、瑕疵面積門檻可調式介面，串接產線
+              PLC 訊號自動觸發檢測。
+            </p>
+            <div class="project-media">
+              <div class="video-grid">
+                <div>
+                  <video
+                    controls
+                    muted
+                    playsinline
+                    preload="metadata"
+                    poster="assets/images/posters/jbd-capture-process-1.jpg"
+                    class="demo-video"
+                  >
+                    <source
+                      src="assets/videos/jbd-capture-process-1.mp4"
+                      type="video/mp4"
+                    />
+                    您的瀏覽器不支援影片播放。
+                  </video>
+                  <p class="media-note">機械手臂拍照流程</p>
+                </div>
+                <div>
+                  <video
+                    controls
+                    muted
+                    playsinline
+                    preload="metadata"
+                    poster="assets/images/posters/jbd-demo.jpg"
+                    class="demo-video"
+                  >
+                    <source src="assets/videos/jbd-demo.mp4" type="video/mp4" />
+                    您的瀏覽器不支援影片播放。
+                  </video>
+                  <p class="media-note">即時辨識監控介面介紹</p>
+                </div>
+              </div>
+            </div>
+            <h4>辨識結果對比</h4>
+            <div class="image-gallery">
+              <a
+                href="assets/images/jbd-defect-before.jpg"
+                target="_blank"
+                rel="noopener"
+                class="gallery-doc-link"
+                data-lightbox="assets/images/jbd-defect-before.jpg"
+              >
+                <img
+                  src="assets/images/jbd-defect-before.jpg"
+                  alt="紙箱瑕疵辨識前原始影像"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="assets/images/jbd-defect-after-1.jpg"
+                target="_blank"
+                rel="noopener"
+                class="gallery-doc-link"
+                data-lightbox="assets/images/jbd-defect-after-1.jpg"
+              >
+                <img
+                  src="assets/images/jbd-defect-after-1.jpg"
+                  alt="紙箱瑕疵辨識後標註結果一"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="assets/docs/jbd-report-2026-07.pdf"
+                target="_blank"
+                rel="noopener"
+                class="gallery-doc-link"
+                data-lightbox="assets/docs/jbd-report-2026-07.pdf"
+              >
+                <img
+                  src="assets/images/jbd-report-preview.jpg"
+                  alt="2026-07 紙箱瑕疵辨識品檢日報表縮圖，點擊查看完整報表"
+                />
+              </a>
+            </div>
+            <h4>使用技術</h4>
+            <ul class="tech-list">
+              <li>機械手臂自動拍照</li>
+              <li>AI 瑕疵偵測（dirt / damage / dot）</li>
+              <li>PLC 產線訊號整合</li>
+              <li>可調式辨識閾值監控介面</li>
+            </ul>
+          </div>
+
+          <!-- 子專案：居家照護與 n8n 警報系統 -->
+          <div class="subproject" id="vision-safehome">
+            <h3 class="subproject-title">AI 智慧居家照護與 n8n 警報系統</h3>
+            <p class="media-note">
+              以攝影機即時偵測居家環境中的人物與危險物件（如剪刀等尖銳物），依距離、持續時間與重疊比例計算危險分數，超過門檻時自動觸發
+              n8n Webhook 發送警報通知，協助遠端照護者即時掌握居家安全狀況。
+            </p>
+            <div class="project-media">
+              <div class="video-grid">
+                <div>
+                  <video
+                    controls
+                    muted
+                    playsinline
+                    preload="metadata"
+                    poster="assets/images/posters/safehome-demo.jpg"
+                    class="demo-video"
+                  >
+                    <source
+                      src="assets/videos/safehome-demo.mp4"
+                      type="video/mp4"
+                    />
+                    您的瀏覽器不支援影片播放。
+                  </video>
+                  <p class="media-note">
+                    即時人物／危險物件偵測與危險分數演算展示
+                  </p>
+                </div>
+                <div>
+                  <a
+                    href="assets/images/safehome-alert-notifications.jpg"
+                    target="_blank"
+                    rel="noopener"
+                    class="gallery-doc-link"
+                    data-lightbox="assets/images/safehome-alert-notifications.jpg"
+                  >
+                    <img
+                      src="assets/images/safehome-alert-notifications.jpg"
+                      alt="AI 危險警報 Mail 與 LINE 通知截圖"
+                      class="media-screenshot"
+                    />
+                  </a>
+                  <p class="media-note">
+                    偵測到危險後自動發送 Mail／LINE 警報通知
+                  </p>
+                </div>
+              </div>
+            </div>
+            <h4>使用技術</h4>
+            <ul class="tech-list">
+              <li>YOLO 人物／物件偵測</li>
+              <li>危險分數演算法</li>
+              <li>n8n Webhook 自動警報</li>
+            </ul>
+            <h4>相關資源</h4>
+            <div class="resource-list">
+              <a
+                href="assets/docs/safehome-report.pdf"
+                target="_blank"
+                rel="noopener"
+                >📄 專案報告書下載</a
+              >
+            </div>
+          </div>
+
+          <!-- 子專案：口罩辨識 -->
+          <div class="subproject" id="vision-mask">
+            <h3 class="subproject-title">AI 影像辨識｜口罩偵測</h3>
+            <div class="project-media">
+              <video
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/images/posters/mask_yolo.jpg"
+                class="demo-video"
+              >
+                <source src="assets/videos/mask_yolo.mp4" type="video/mp4" />
+                您的瀏覽器不支援影片播放。
+              </video>
+              <p class="media-note">影片口罩辨識（Face Mask / No Mask）</p>
+            </div>
+            <h4>使用技術</h4>
+            <ul class="tech-list">
+              <li>YOLOv8 / PyTorch / OpenCV</li>
+            </ul>
+            <p class="media-note">
+              素材來源：
+              <a
+                href="https://www.youtube.com/@%E6%98%87%E5%BA%A6%E6%B8%B8/search?query=%E5%8F%A3%E7%BD%A9"
+                target="_blank"
+                rel="noopener"
+              >
+                YouTube｜昇度游
+              </a>
             </p>
           </div>
-          <h4>使用技術</h4>
-          <ul class="tech-list">
-            <li>YOLOv8 / PyTorch / OpenCV</li>
-          </ul>
-          <p class="media-note">
-            素材來源：
-            <a href="https://www.youtube.com/@%E6%98%87%E5%BA%A6%E6%B8%B8/search?query=%E5%8F%A3%E7%BD%A9" target="_blank" rel="noopener">
-              YouTube｜昇度游
-            </a>
-          </p>
-        </div>
-      </section>
+        </section>
 
-      <!-- 區塊二：系統整合 -->
-      <section class="project-card" id="integration">
-        <h2>系統整合</h2>
-        <p class="section-desc">
-          串接第三方服務與既有工具（表單、金流、通訊 API 等），開發成可實際上線使用的完整應用系統。
-        </p>
-
-        <!-- 子專案：演唱會售票系統 -->
-        <div class="subproject" id="integration-ticketing">
-          <h3 class="subproject-title">演唱會售票系統與需求規格書</h3>
-          <div class="project-link">
-            <strong>🔗 Project Demo：</strong>
-            <a href="assets/docs/concert-ticketing-system.pdf" target="_blank" rel="noopener">
-              🎫 View PDF
-            </a>
-          </div>
-          <h4>專案概述</h4>
-          <p>
-            本專案旨在設計一套演唱會售票系統，讓使用者可以瀏覽演唱會資訊、選擇座位，並在線上購買門票。
-            系統規格包含使用者角色、功能需求及系統操作流程，以確保使用者能擁有順暢的購票體驗。
+        <!-- 區塊二：系統整合 -->
+        <section class="project-card" id="integration">
+          <h2>系統整合</h2>
+          <p class="section-desc">
+            串接第三方服務與既有工具（表單、金流、通訊 API
+            等），開發成可實際上線使用的完整應用系統。
           </p>
-          <div class="project-media">
-            <a href="assets/images/ticketing-usecase-diagram.png" data-lightbox="assets/images/ticketing-usecase-diagram.png">
-              <img src="assets/images/ticketing-usecase-diagram.png" alt="圖 6：訂單與票券管理模組使用案例圖" class="media-screenshot">
-            </a>
-            <p class="media-note">圖 6：訂單與票券管理模組使用案例圖</p>
-          </div>
-          <h4>使用技術</h4>
-          <ul class="tech-list">
-            <li>系統需求分析</li>
-            <li>使用案例圖</li>
-            <li>系統流程設計</li>
-            <li>資料庫概念設計</li>
-            <li>軟體需求規格書(SRS)</li>
-          </ul>
-        </div>
 
-        <!-- 子專案：招生線上報名系統 -->
-        <div class="subproject" id="integration-ntpc">
-          <h3 class="subproject-title">招生線上報名系統</h3>
-          <p class="project-link">
-            🔗 專案展示：
-            <a href="https://yuqunwork-oss.github.io/ntpc-skill-assoc/index.html"
-               target="_blank" rel="noopener">
-              ✨ 線上 DEMO
-            </a>
-          </p>
-          <div class="project-media">
-            <video controls muted playsinline preload="metadata" poster="assets/images/posters/ntpc_demo09.jpg" class="demo-video">
-              <source src="assets/videos/ntpc_demo09.mp4" type="video/mp4">
-              您的瀏覽器不支援影片播放。
-            </video>
-            <p class="media-note">
-              建立線上報名系統，實現後台即時資料收集與管理。
+          <!-- 子專案：演唱會售票系統 -->
+          <div class="subproject" id="integration-ticketing">
+            <h3 class="subproject-title">演唱會售票系統與需求規格書</h3>
+            <div class="project-link">
+              <strong>🔗 Project Demo：</strong>
+              <a
+                href="assets/docs/concert-ticketing-system.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                🎫 View PDF
+              </a>
+            </div>
+            <h4>專案概述</h4>
+            <p>
+              本專案旨在設計一套演唱會售票系統，讓使用者可以瀏覽演唱會資訊、選擇座位，並在線上購買門票。
+              系統規格包含使用者角色、功能需求及系統操作流程，以確保使用者能擁有順暢的購票體驗。
             </p>
+            <div class="project-media">
+              <a
+                href="assets/images/ticketing-usecase-diagram.png"
+                data-lightbox="assets/images/ticketing-usecase-diagram.png"
+              >
+                <img
+                  src="assets/images/ticketing-usecase-diagram.png"
+                  alt="圖 6：訂單與票券管理模組使用案例圖"
+                  class="media-screenshot"
+                />
+              </a>
+              <p class="media-note">圖 6：訂單與票券管理模組使用案例圖</p>
+            </div>
+            <h4>使用技術</h4>
+            <ul class="tech-list">
+              <li>系統需求分析</li>
+              <li>使用案例圖</li>
+              <li>系統流程設計</li>
+              <li>資料庫概念設計</li>
+              <li>軟體需求規格書(SRS)</li>
+            </ul>
           </div>
-          <h4>使用技術</h4>
-          <ul class="tech-list">
-            <li>HTML / CSS / JavaScript</li>
-            <li>Google Forms / Google Sheets</li>
-            <li>Google Apps Script</li>
-            <li>GitHub Pages 部署</li>
-          </ul>
-        </div>
 
-        <!-- 子專案：AI 智能官方LINE -->
-        <div class="subproject" id="integration-line">
-          <h3 class="subproject-title">AI 智能官方LINE</h3>
-          <div class="project-link">
-            <strong>🔗 專案展示：</strong>
-            <a href="assets/docs/LINE_Official_Account_AI_Demo.pdf" target="_blank" rel="noopener">
-              ✨ PDF DEMO
-            </a>
+          <!-- 子專案：招生線上報名系統 -->
+          <div class="subproject" id="integration-ntpc">
+            <h3 class="subproject-title">招生線上報名系統</h3>
+            <p class="project-link">
+              🔗 專案展示：
+              <a
+                href="https://yuqunwork-oss.github.io/ntpc-skill-assoc/index.html"
+                target="_blank"
+                rel="noopener"
+              >
+                ✨ 線上 DEMO
+              </a>
+            </p>
+            <div class="project-media">
+              <video
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/images/posters/ntpc_demo09.jpg"
+                class="demo-video"
+              >
+                <source src="assets/videos/ntpc_demo09.mp4" type="video/mp4" />
+                您的瀏覽器不支援影片播放。
+              </video>
+              <p class="media-note">
+                建立線上報名系統，實現後台即時資料收集與管理。
+              </p>
+            </div>
+            <h4>使用技術</h4>
+            <ul class="tech-list">
+              <li>HTML / CSS / JavaScript</li>
+              <li>Google Forms / Google Sheets</li>
+              <li>Google Apps Script</li>
+              <li>GitHub Pages 部署</li>
+            </ul>
           </div>
-          <h4>使用技術</h4>
-          <ul class="tech-list">
-            <li>LINE API / AI 模型 / RAG / Python</li>
-          </ul>
-        </div>
-      </section>
 
-      <!-- 區塊三：程式練功區 -->
-      <section class="project-card" id="practice">
-        <h2>程式練功區</h2>
-        <p class="section-desc">
-          練習網頁前端基礎功的動手實作小專案。
-        </p>
-
-        <!-- 子專案：小畫家 -->
-        <div class="subproject" id="practice-paint">
-          <h3 class="subproject-title">小畫家</h3>
-          <div class="project-link">
-            <strong>🔗 專案展示：</strong>
-            <a href="paint-demo.html" target="_blank" rel="noopener">
-              ✨ 線上 DEMO
-            </a>
+          <!-- 子專案：AI 智能官方LINE -->
+          <div class="subproject" id="integration-line">
+            <h3 class="subproject-title">AI 智能官方LINE</h3>
+            <div class="project-link">
+              <strong>🔗 專案展示：</strong>
+              <a
+                href="assets/docs/LINE_Official_Account_AI_Demo.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                ✨ PDF DEMO
+              </a>
+            </div>
+            <h4>使用技術</h4>
+            <ul class="tech-list">
+              <li>LINE API / AI 模型 / RAG / Python</li>
+            </ul>
           </div>
-          <h4>使用技術</h4>
-          <ul class="tech-list">
-            <li>HTML / CSS / JavaScript / Canvas</li>
-          </ul>
-        </div>
-      </section>
+        </section>
 
+        <!-- 區塊三：程式練功區 -->
+        <section class="project-card" id="practice">
+          <h2>程式練功區</h2>
+          <p class="section-desc">練習網頁前端基礎功的動手實作小專案。</p>
+
+          <!-- 子專案：小畫家 -->
+          <div class="subproject" id="practice-paint">
+            <h3 class="subproject-title">小畫家</h3>
+            <div class="project-link">
+              <strong>🔗 專案展示：</strong>
+              <a href="paint-demo.html" target="_blank" rel="noopener">
+                ✨ 線上 DEMO
+              </a>
+            </div>
+            <h4>使用技術</h4>
+            <ul class="tech-list">
+              <li>HTML / CSS / JavaScript / Canvas</li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </div>
-  </div>
 
-  <!-- 頁尾 -->
-  <footer>
-    <p>© 2026 吳育群 Yu-Qun Wu</p>
-  </footer>
+    <!-- 頁尾 -->
+    <footer>
+      <p>© 2026 吳育群 Yu-Qun Wu</p>
+    </footer>
 
-  <!-- 圖片放大彈窗 -->
-  <div class="lightbox" id="lightbox" hidden>
-    <button type="button" class="lightbox-close" aria-label="關閉放大圖">✕</button>
-    <div class="lightbox-content" id="lightboxContent"></div>
-  </div>
+    <!-- 圖片放大彈窗 -->
+    <div class="lightbox" id="lightbox" hidden>
+      <button type="button" class="lightbox-close" aria-label="關閉放大圖">
+        ✕
+      </button>
+      <div class="lightbox-content" id="lightboxContent"></div>
+    </div>
 
-  <script src="assets/js/lightbox.js"></script>
-  <script src="assets/js/projects-nav.js"></script>
-</body>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/projects-nav.js"></script>
+  </body>
 </html>
