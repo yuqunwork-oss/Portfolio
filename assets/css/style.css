@@ -423,7 +423,7 @@ h3 {
 ========================= */
 .award-photo {
   width: 100%;
-  max-width: 520px;
+  max-width: 260px;
   height: auto;
   display: block;
   margin: 20px auto;
@@ -448,7 +448,7 @@ h3 {
 }
 
 .cert-item {
-  width: min(520px, 100%);
+  width: min(260px, 100%);
   text-align: center;
   transition: transform 0.25s ease;
 }
@@ -457,7 +457,7 @@ h3 {
 
 .cert-item p {
   margin: 10px auto 0;
-  max-width: 520px;
+  max-width: 260px;
   line-height: 1.6;
 }
 
