@@ -729,6 +729,29 @@ footer {
 }
 
 /* =========================
+   Gold Glow Heading（證照標題）
+========================= */
+.glow-gold {
+  color: #f0c667;
+  border-bottom-color: #d9a441;
+  text-shadow: 0 0 10px rgba(240, 198, 103, 0.45), 0 0 22px rgba(217, 164, 65, 0.22);
+  animation: glow-gold-pulse 3.5s ease-in-out infinite;
+}
+
+@keyframes glow-gold-pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(240, 198, 103, 0.4), 0 0 22px rgba(217, 164, 65, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 16px rgba(240, 198, 103, 0.65), 0 0 32px rgba(217, 164, 65, 0.35);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-gold { animation: none; }
+}
+
+/* =========================
    Contact Page 特效
 ========================= */
 .glow-heading {
