@@ -7,3 +7,6 @@ assets/videos/
 # 系統/編輯器產生的雜項檔案
 .DS_Store
 Thumbs.db
+
+# Claude Code 本機工具狀態，不需要進版本控制
+.claude/
