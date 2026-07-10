@@ -320,6 +320,18 @@ h3 {
 }
 
 /* =========================
+   Section Title（獨立於卡片外的大區塊標題）
+========================= */
+.section-title {
+  margin: 50px auto 16px;
+  scroll-margin-top: calc(var(--nav-h) + 20px);
+}
+
+.section-title + .project-card {
+  margin-top: 0;
+}
+
+/* =========================
    Section Description（大區塊標題下的整體說明）
 ========================= */
 .section-desc {
@@ -334,6 +346,7 @@ h3 {
   padding-top: 36px;
   border-top: 1px solid var(--border-light);
   text-align: center;
+  scroll-margin-top: calc(var(--nav-h) + 20px);
 }
 
 .subproject:first-of-type {
