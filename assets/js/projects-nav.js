@@ -7,7 +7,7 @@
     btn.addEventListener("click", () => {
       const expanded = btn.getAttribute("aria-expanded") === "true";
       btn.setAttribute("aria-expanded", String(!expanded));
-      const items = btn.nextElementSibling;
+      const items = (btn.closest(".nav-group-header") || btn).nextElementSibling;
       if (items) items.hidden = expanded;
     });
   });

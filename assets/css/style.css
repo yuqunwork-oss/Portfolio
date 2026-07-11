@@ -234,19 +234,41 @@ h3 {
 
 .nav-group + .nav-group { margin-top: 14px; }
 
-.nav-group-toggle {
+.nav-group-header {
   display: flex;
   align-items: center;
-  gap: 8px;
-  width: 100%;
-  background: none;
-  border: none;
+  gap: 4px;
+}
+
+.nav-group-title {
+  flex: 1;
+  display: block;
   color: var(--text-main);
   font-size: 0.95rem;
   font-weight: 700;
   padding: 6px 4px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.nav-group-title:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+.nav-group-title.active {
+  background: rgba(56, 189, 248, 0.16);
+  color: var(--primary);
+}
+
+.nav-group-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 6px;
   cursor: pointer;
-  text-align: left;
   font-family: inherit;
 }
 
