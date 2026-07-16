@@ -290,13 +290,12 @@
             <h3 class="subproject-title">錶帶埋入射出成型 AI 視覺檢測系統</h3>
             <p class="media-note">
               手錶錶帶製程採用埋入式射出成型（Insert
-              Molding）：作業員先將金屬定位針放入模具，再射出塑料成型；若定位針放置角度偏移，該處應力不均，成品即會斷裂報廢。我針對此工序開發一套完整的
+              Molding）：作業員先將金屬定位針放入模具，再射出塑料成型；若定位針放置角度偏移，該處應力不均，機器會因此壞掉。我針對此工序開發一套完整的
               AI
-              視覺檢測系統，內建模型訓練、模型評估、模型推論與邏輯控制四大模組，可同時對多個模穴即時比對定位針位置並回傳
+              視覺檢測系統，可同時對多個模穴即時比對定位針位置並回傳
               OK／NG
-              判斷，攔截不良品流入下一站。本案由我獨立前往客戶端產線執行系統部署、參數調校與現場即時展示，成功完成
-              Demo
-              並獲得客戶高度肯定，展現獨立完成客戶端專案導入與成果簡報的能力。
+              判斷，並且用紅綠燈表示，需要綠燈才能發送進去機台訊號，反之紅燈攔截進入機器。本案前往客戶端產線執行系統部署、參數調校與現場即時展示，成功完成
+              Demo。
             </p>
             <div class="project-media">
               <div class="video-grid">
@@ -320,39 +319,71 @@
               </div>
             </div>
             <h4>現場實機照片</h4>
-            <div class="image-gallery">
-              <a
-                href="assets/images/strap-demo-1.jpg"
-                target="_blank"
-                rel="noopener"
-                class="gallery-doc-link"
-                data-lightbox="assets/images/strap-demo-1.jpg"
-              >
-                <img
-                  src="assets/images/strap-demo-1.jpg"
-                  alt="客戶端產線埋入式射出成型機台，作業員放置金屬定位針"
-                  loading="lazy"
-                />
-              </a>
-              <a
-                href="assets/images/strap-demo-2.jpg"
-                target="_blank"
-                rel="noopener"
-                class="gallery-doc-link"
-                data-lightbox="assets/images/strap-demo-2.jpg"
-              >
-                <img
-                  src="assets/images/strap-demo-2.jpg"
-                  alt="錶帶模具特寫，定位針放置於模穴中"
-                  loading="lazy"
-                />
-              </a>
+            <div class="photo-carousel">
+              <div class="carousel-row">
+                <button type="button" class="carousel-btn carousel-prev" aria-label="上一張">
+                  ‹
+                </button>
+                <div class="carousel-viewport">
+                  <a
+                    href="assets/images/strap-demo-1.jpg"
+                    class="carousel-slide active"
+                    data-lightbox="assets/images/strap-demo-1.jpg"
+                  >
+                    <img
+                      src="assets/images/strap-demo-1.jpg"
+                      alt="客戶端產線埋入式射出成型機台，作業員放置金屬定位針"
+                      loading="lazy"
+                    />
+                  </a>
+                  <a
+                    href="assets/images/strap-demo-2.jpg"
+                    class="carousel-slide"
+                    data-lightbox="assets/images/strap-demo-2.jpg"
+                  >
+                    <img
+                      src="assets/images/strap-demo-2.jpg"
+                      alt="錶帶模具特寫，定位針放置於模穴中"
+                      loading="lazy"
+                    />
+                  </a>
+                  <a
+                    href="assets/images/strap-demo-3.jpg"
+                    class="carousel-slide"
+                    data-lightbox="assets/images/strap-demo-3.jpg"
+                  >
+                    <img
+                      src="assets/images/strap-demo-3.jpg"
+                      alt="四模穴錶帶射出模具開模畫面"
+                      loading="lazy"
+                    />
+                  </a>
+                  <a
+                    href="assets/images/strap-demo-4.jpg"
+                    class="carousel-slide"
+                    data-lightbox="assets/images/strap-demo-4.jpg"
+                  >
+                    <img
+                      src="assets/images/strap-demo-4.jpg"
+                      alt="成型完成之快拆式錶帶成品"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <button type="button" class="carousel-btn carousel-next" aria-label="下一張">
+                  ›
+                </button>
+              </div>
+              <div class="carousel-counter">
+                <span class="carousel-current">1</span> /
+                <span class="carousel-total">4</span>
+              </div>
             </div>
             <h4>使用技術</h4>
             <ul class="tech-list">
               <li>AI 視覺瑕疵檢測（定位針偏移偵測）</li>
-              <li>自建模型訓練／評估／推論工具鏈</li>
               <li>多模穴即時 OK／NG 邏輯判斷</li>
+              <li>紅綠燈號誌與機台訊號整合</li>
               <li>客戶端產線現場部署與展示</li>
             </ul>
           </div>
@@ -619,5 +650,6 @@
 
     <script src="assets/js/lightbox.js"></script>
     <script src="assets/js/projects-nav.js"></script>
+    <script src="assets/js/carousel.js"></script>
   </body>
 </html>
