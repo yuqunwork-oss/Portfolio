@@ -9,7 +9,10 @@
 
     const show = (i) => {
       index = (i + slides.length) % slides.length;
-      slides.forEach((slide, n) => slide.classList.toggle("active", n === index));
+      slides.forEach((slide, n) => {
+        slide.classList.toggle("active", n === index);
+        if (n !== index) slide.querySelector("video")?.pause();
+      });
       if (currentEl) currentEl.textContent = String(index + 1);
     };
 
