@@ -40,6 +40,7 @@
             <ul class="nav-group-items">
               <li><a href="#vision-computex">雙臂機器人視覺抓取</a></li>
               <li><a href="#vision-jbd">紙箱瑕疵辨識</a></li>
+              <li><a href="#vision-strap">錶帶埋入射出成型檢測</a></li>
               <li><a href="#vision-safehome">居家照護警報</a></li>
               <li><a href="#vision-mask">口罩偵測</a></li>
             </ul>
@@ -281,6 +282,78 @@
               <li>AI 瑕疵偵測（dirt / damage / dot）</li>
               <li>PLC 產線訊號整合</li>
               <li>可調式辨識閾值監控介面</li>
+            </ul>
+          </div>
+
+          <!-- 子專案：錶帶埋入射出成型 AI 視覺檢測 -->
+          <div class="subproject" id="vision-strap">
+            <h3 class="subproject-title">錶帶埋入射出成型 AI 視覺檢測系統</h3>
+            <p class="media-note">
+              手錶錶帶製程採用埋入式射出成型（Insert
+              Molding）：作業員先將金屬定位針放入模具，再射出塑料成型；若定位針放置角度偏移，該處應力不均，成品即會斷裂報廢。我針對此工序開發一套完整的
+              AI
+              視覺檢測系統，內建模型訓練、模型評估、模型推論與邏輯控制四大模組，可同時對多個模穴即時比對定位針位置並回傳
+              OK／NG
+              判斷，攔截不良品流入下一站。本案由我獨立前往客戶端產線執行系統部署、參數調校與現場即時展示，成功完成
+              Demo
+              並獲得客戶高度肯定，展現獨立完成客戶端專案導入與成果簡報的能力。
+            </p>
+            <div class="project-media">
+              <div class="video-grid">
+                <div>
+                  <video
+                    controls
+                    muted
+                    playsinline
+                    preload="metadata"
+                    poster="assets/images/posters/strap-demo.jpg"
+                    class="demo-video"
+                  >
+                    <source
+                      src="assets/videos/strap-demo.mp4"
+                      type="video/mp4"
+                    />
+                    您的瀏覽器不支援影片播放。
+                  </video>
+                  <p class="media-note">客戶端現場即時辨識展示</p>
+                </div>
+              </div>
+            </div>
+            <h4>現場實機照片</h4>
+            <div class="image-gallery">
+              <a
+                href="assets/images/strap-demo-1.jpg"
+                target="_blank"
+                rel="noopener"
+                class="gallery-doc-link"
+                data-lightbox="assets/images/strap-demo-1.jpg"
+              >
+                <img
+                  src="assets/images/strap-demo-1.jpg"
+                  alt="客戶端產線埋入式射出成型機台，作業員放置金屬定位針"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="assets/images/strap-demo-2.jpg"
+                target="_blank"
+                rel="noopener"
+                class="gallery-doc-link"
+                data-lightbox="assets/images/strap-demo-2.jpg"
+              >
+                <img
+                  src="assets/images/strap-demo-2.jpg"
+                  alt="錶帶模具特寫，定位針放置於模穴中"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+            <h4>使用技術</h4>
+            <ul class="tech-list">
+              <li>AI 視覺瑕疵檢測（定位針偏移偵測）</li>
+              <li>自建模型訓練／評估／推論工具鏈</li>
+              <li>多模穴即時 OK／NG 邏輯判斷</li>
+              <li>客戶端產線現場部署與展示</li>
             </ul>
           </div>
 
