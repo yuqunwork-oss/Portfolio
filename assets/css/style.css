@@ -447,9 +447,9 @@ h3 {
 
 .carousel-viewport {
   position: relative;
-  flex: 1;
-  aspect-ratio: 3 / 4;
-  max-height: 520px;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 440px;
   margin: 0 auto;
   border-radius: 14px;
   overflow: hidden;
@@ -508,7 +508,7 @@ h3 {
 }
 
 @media (max-width: 640px) {
-  .carousel-viewport { max-height: 380px; }
+  .carousel-viewport { height: 340px; }
   .carousel-btn { width: 36px; height: 36px; font-size: 1.3rem; }
 }
 
